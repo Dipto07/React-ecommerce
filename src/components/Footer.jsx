@@ -1,22 +1,33 @@
-import React from "react";
+import React from 'react';
 
-const Footer = () => {
+function Footer() {
+  const footerStyle = {
+    backgroundColor: '#333',
+    color: 'white',
+    textAlign: 'center',
+    padding: '20px',
+    left: '0',
+    bottom: '0',
+    width: '100%',
+    borderTop: '1px solid #444'
+  };
+
+  const linkStyle = {
+    color: 'lightblue',
+    textDecoration: 'none',
+    margin: '0 10px'
+  };
+
   return (
-    <>
-      <footer className="mb-0 text-center">
-        <div className="d-flex align-items-center justify-content-center pb-5">
-          <div className="col-md-6">
-            <p className="mb-3 mb-md-0">Made with ❤️ by {" "}
-              <a  href="https://sahibsingh.dev" className="text-decoration-underline text-dark fs-5" target="_blank" rel="noreferrer">Sahib Singh</a>
-            </p>
-            <a className="text-dark fs-4" href="https://github.com/ssahibsingh" target="_blank" rel="noreferrer">
-              <i className="fa fa-github"></i>
-            </a>
-          </div>
-        </div>
-      </footer>
-    </>
+    <footer style={footerStyle}>
+      <p>© {new Date().getFullYear()} React E-commerce. All rights reserved.</p>
+      <p>
+        <a href="/terms" style={linkStyle}>Terms of Service</a>
+        | 
+        <a href="/privacy" style={linkStyle}>Privacy Policy</a>
+      </p>
+    </footer>
   );
-};
+}
 
 export default Footer;
